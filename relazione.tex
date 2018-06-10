@@ -1,0 +1,32 @@
+%generare il pdf con il comando: pdflatex main.tex
+\documentclass[10pt, a4paper, oneside, openany, dvipsnames, table]{article}
+\usepackage{template/sos}
+\usepackage{subcaption}
+\usepackage{tocloft}
+\input{comandi.tex}
+\setlength\cftparskip{5pt}
+\setlength\cftbeforefigskip{0.2cm}
+
+\begin{document}
+\copertina{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%SOMMARIO
+\newpage
+\tableofcontents
+\newpage
+\listoffigures
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%PARAGRAFI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{intro.tex}
+\pagebreak
+\input{analisiPreliminare.tex}
+\pagebreak
+\input{homepage.tex}
+\input{contenuto.tex}
+\input{ricerca.tex}
+\input{pubblicita.tex}
+\input{valutazione.tex}
+
+\end{document}
